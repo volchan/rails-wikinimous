@@ -5,3 +5,13 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Article.destroy_all
+
+puts 'THEY SEE ME SEEDING......'
+
+100.times do
+  Article.create(title: Faker::RickAndMorty.quote, content: Faker::Lorem.paragraph)
+  print '👌'
+end
+
+puts 'done !'
